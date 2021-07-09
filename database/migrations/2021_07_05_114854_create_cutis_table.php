@@ -15,6 +15,9 @@ class CreateCutisTable extends Migration
     {
         Schema::create('cutis', function (Blueprint $table) {
             $table->id();
+            $table->string('user_nik');
+            $table->integer('total_cuti');
+            $table->year('tahun');
             $table->timestamps();
         });
     }

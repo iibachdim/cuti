@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -51,14 +51,17 @@ class LoginController extends Controller
         $role = Auth::user()->role;
         switch ($role) {
           case 'admin':
-            return '/dashboard';
+            return '/admin/dashboard';
             break;
           case 'staff':
-            return '/dashboard';
+            return '/staff/dashboard';
+            break;
+          case 'karyawan':
+            return '/karyawan/dashboard';
             break;
 
           default:
-            return '/home';
+            return '/';
           break;
         }
     }

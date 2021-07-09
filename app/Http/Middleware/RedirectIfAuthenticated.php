@@ -23,17 +23,17 @@ class RedirectIfAuthenticated
 
             switch ($role) {
                 case 'admin':
-                    return redirect('/dashboard');
+                    return redirect('/admin/dashboard');
                     break;
                 case 'staff':
-                    return redirect('/dashboard');
+                    return redirect('/staff/dashboard');
                     break;
                 case 'karyawan':
-                    return redirect('/home');
+                    return redirect('/karyawan/dashboard');
                     break;
 
                 default:
-                    return redirect('/home');
+                    return redirect('/');
             }
         }
 

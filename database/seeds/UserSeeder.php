@@ -34,5 +34,15 @@ class UserSeeder extends Seeder
             'role' => 'staff',
             'password' => Hash::make('password'),
         ]);
+        DB::table('users')->insert([
+            'name' => 'Karyawan',
+            'email' => 'karyawan@karyawan.com',
+            'nik' => '003',
+            'jenis_kelamin' => 'laki-laki',
+            'alamat' => '',
+            'no_hp' => '',
+            'role' => 'karyawan',
+            'password' => Hash::make('password'),
+        ]);
     }
 }

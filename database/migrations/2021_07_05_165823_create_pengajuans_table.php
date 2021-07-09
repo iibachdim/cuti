@@ -15,6 +15,10 @@ class CreatePengajuansTable extends Migration
     {
         Schema::create('pengajuans', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('cuti_id');
+            $table->date('tanggal');
+            $table->string('status');
             $table->timestamps();
         });
     }
